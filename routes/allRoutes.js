@@ -1,0 +1,51 @@
+const express = require("express");
+const router = express.Router();
+const usersRoutes = require("./userRoutes");
+const heroSectionHomePageRoutes = require("./home-page/heroSectionHomePageRoutes");
+const partnershipHomePageRoutes = require("./home-page/partnershipHomePageRoutes");
+const serviceHomePageRoutes = require("./home-page/serviceHomePageRoutes");
+const serviceDataRoutes = require("./serviceData/serviceDataRoutes");
+const aboutUsHomePageRoutes = require("../routes/home-page/aboutUsHomePageRoutes");
+const specialSectionHomePageRoutes = require("../routes/home-page/specialSectionHomePageRoutes");
+const achievementHomeRoutes = require("../routes/home-page/achievementHomeRoutes");
+const homeWorkPageRoutes = require("../routes/home-page/homeWorkPageRoutes");
+const clientReviewPageRoutes = require("../routes/home-page/clientReviewPageRoutes");
+const HomeGetInTouchRoutes = require("../routes/home-page/HomeGetInTouchRoutes");
+const contactRoutes = require("../routes/contact/contactRoutes");
+const contactPageRoutes = require("../routes/contact/contactPageRoutes");
+const footerRoutes = require("../routes/footer/footerRoutes");
+const blogRoutes = require("../routes/blog/blogRoutes");
+const productsRoutes = require("../routes/products/productsRoutes");
+const aboutBannerRoutes = require("../routes/about/aboutBannerRoutes");
+const aboutKnowMoreRoutes = require("../routes/about/aboutKnowMoreRoutes");
+const aboutReviewRoutes = require("../routes/about/aboutReviewRoutes");
+const aboutExperienceRoutes = require("../routes/about/aboutExperienceRoutes");
+const aboutMissionVisionRoutes = require("../routes/about/aboutMissionVisionRoutes");
+
+router.get("/", (req, res) => {
+  res.send("Server Is Runnings");
+});
+
+router.use("/", usersRoutes);
+router.use("/", heroSectionHomePageRoutes);
+router.use("/", partnershipHomePageRoutes);
+router.use("/", serviceHomePageRoutes);
+router.use("/", serviceDataRoutes);
+router.use("/", aboutUsHomePageRoutes);
+router.use("/", specialSectionHomePageRoutes);
+router.use("/", achievementHomeRoutes);
+router.use("/", homeWorkPageRoutes);
+router.use("/", clientReviewPageRoutes);
+router.use("/", HomeGetInTouchRoutes);
+router.use("/", contactRoutes);
+router.use("/", contactPageRoutes);
+router.use("/", footerRoutes);
+router.use("/", blogRoutes);
+router.use("/", productsRoutes);
+router.use("/", aboutBannerRoutes);
+router.use("/", aboutKnowMoreRoutes);
+router.use("/", aboutReviewRoutes);
+router.use("/", aboutExperienceRoutes);
+router.use("/", aboutMissionVisionRoutes);
+
+module.exports = router;
